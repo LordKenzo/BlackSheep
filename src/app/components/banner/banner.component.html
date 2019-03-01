@@ -1,7 +1,23 @@
 <h3>Banner Component</h3>
 <div class="large-banner">
   <!-- Uso una immagine e non una background image in SASS per gestire le immagini in maniera responsive -->
-  <img class="large-banner__image" src="assets/images/black-sheep--large.jpg">
+  <picture>
+    <source
+      srcset="assets/images/bg--large.png 1920w,
+      assets/images/bg--large-hi-dpi.png 3888w"
+      media="(min-width:1380px">
+    <source
+      srcset="assets/images/bg--medium.png 1380w,
+      assets/images/bg--medium-hi-dpi.png 2760w"
+      media="(min-width:990px">
+    <source
+      srcset="assets/images/bg--small.png 990w,
+      assets/images/bg--small-hi-dpi.png 1980w"
+      media="(min-width:640px">
+    <img srcset="assets/images/bg--smaller.png 640w,
+    assets/images/bg--smaller-hi-dpi.png 1280w
+    ">
+  </picture>
   <div class="large-banner__text-content">
     <h1 class="large-banner__title">{{title}}</h1>
     <h2 class="large-banner__subtitle">{{subtitle}}</h2>

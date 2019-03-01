@@ -14,3 +14,12 @@ I used this npm package:
 I used this libraries in index.html:
 
 [Passive Events](https://unpkg.com/default-passive-events)
+
+## Responsive Images
+
+According to Google, anything above 2 seconds of download time will put off your users and discourage the crawlers from indexing your website.
+[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+[Tool Images Generator](https://www.responsivebreakpoints.com/) e [Aggiungi testo immagine](https://addtext.com/)
+
+Utilizzeremo sempre il tag image, ma abbiamo differenti immagini per differenti risoluzioni grazie all'attributo `srcset`. Se ho già scaricato la versione "Large" non scaricherò la versione "Small". Per fare le verifiche del corretto caricamento caricare la pagina in incognito o pulire la cache.
+Abbiamo 3 immagini: small, medium e large. [Risorsa](https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433)
