@@ -1,8 +1,11 @@
 <h3>Banner Component</h3>
 <div class="large-banner">
-  <img src="assets/images/black-sheep--large.jpg">
-  <h1>Your gym.</h1>
-  <h2>Fitness.</h2>
-  <p>We create soul and body that inspire you to be you.</p>
-  <p><a href="#">Join Us Today!</a></p>
+  <!-- Uso una immagine e non una background image in SASS per gestire le immagini in maniera responsive -->
+  <img class="large-banner__image" src="assets/images/black-sheep--large.jpg">
+  <div class="large-banner__text-content">
+    <h1 class="large-banner__title">{{title}}</h1>
+    <h2 class="large-banner__subtitle">{{subtitle}}</h2>
+    <p class="large-banner__description">We create soul and body that inspire you to be you.</p>
+    <a class="btn btn--large" href="#">Join Us Today!</a>
+  </div>
 </div>

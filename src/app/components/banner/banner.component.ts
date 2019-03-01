@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['banner.component.scss']
 })
 export class BannerComponent {
+  title = 'The Black Sheep';
+  subtitle = 'Forge Body';
+  description = 'Premium Fitness in Ladispoli';
 
 }
