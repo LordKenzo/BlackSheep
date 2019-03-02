@@ -1,21 +1,42 @@
 <h3>Banner Component</h3>
 <div class="large-banner">
   <!-- Uso una immagine e non una background image in SASS per gestire le immagini in maniera responsive -->
+
   <picture>
     <source
-      srcset="assets/images/bg--large.png 1920w, assets/images/bg--large-hi-dpi.png 3888w"
+      srcset="assets/images/bg/bg-1920.webp 1920w, assets/images/bg/bg-3840-hi-dpi.webp 3840w"
       media="(min-width:1380px)"
+      type="image/webp"
     />
     <source
-      srcset="assets/images/bg--medium.png 1380w, assets/images/bg--medium-hi-dpi.png 2760w"
+      srcset="assets/images/bg/bg-1380.webp 1380w, assets/images/bg/bg-2760-hi-dpi.webp 2760w"
       media="(min-width:990px)"
+      type="image/webp"
     />
     <source
-      srcset="assets/images/bg--small.png 990w, assets/images/bg--small-hi-dpi.png 1980w"
+      srcset="assets/images/bg/bg-990.webp 990w, assets/images/bg/bg-1980-hi-dpi.webp 1980w"
       media="(min-width:640px)"
+      type="image/webp"
     />
-    <img srcset="assets/images/bg--smaller.png 640w, assets/images/bg--smaller-hi-dpi.png 1280w" />
+
+    <img
+      type="image/jpeg"
+      sizes="(max-width: 3840px) 100vw, 3840px"
+      srcset="
+        assets/images/bg/bg-640.jpg   640w,
+        assets/images/bg/bg-990.jpg   990w,
+        assets/images/bg/bg-1280.jpg 1280w,
+        assets/images/bg/bg-1380.jpg 1380w,
+        assets/images/bg/bg-1920.jpg 1920w,
+        assets/images/bg/bg-1980.jpg 1980w,
+        assets/images/bg/bg-2760.jpg 2760w,
+        assets/images/bg/bg-3840.jpg 3840w
+      "
+      src="assets/images/bg/bg--large-hi-dpi_bdjqao_c_scale,w_3840.jpg"
+      alt="Image Background"
+    />
   </picture>
+
   <div class="large-banner__text-content">
     <h1 class="large-banner__title">{{ title }}</h1>
     <h2 class="large-banner__subtitle">{{ subtitle }}</h2>
