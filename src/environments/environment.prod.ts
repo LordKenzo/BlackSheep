@@ -1,3 +1,6 @@
+import fireKey from './firebase.key';
+
 export const environment = {
-  production: true
+  firebase: fireKey,
+  production: true,
 };
