@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 
+#My Key
+*.key.*
+
 # dependencies
 /node_modules
 

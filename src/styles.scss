@@ -4,6 +4,11 @@
 @import 'assets/sass/base/index';
 @import 'assets/sass/components/index';
 
+@font-face {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-display: auto;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #333;

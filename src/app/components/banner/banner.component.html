@@ -2,20 +2,11 @@
 <div class="large-banner">
   <!-- Uso una immagine e non una background image in SASS per gestire le immagini in maniera responsive -->
 
-  <picture>
+  <picture *ngIf="images">
     <source
-      srcset="assets/images/bg/bg-1920.webp 1920w, assets/images/bg/bg-3840-hi-dpi.webp 3840w"
-      media="(min-width:1380px)"
-      type="image/webp"
-    />
-    <source
-      srcset="assets/images/bg/bg-1380.webp 1380w, assets/images/bg/bg-2760-hi-dpi.webp 2760w"
-      media="(min-width:990px)"
-      type="image/webp"
-    />
-    <source
-      srcset="assets/images/bg/bg-990.webp 990w, assets/images/bg/bg-1980-hi-dpi.webp 1980w"
-      media="(min-width:640px)"
+      *ngFor="let image of images"
+      srcset="assets/images/bg/{{image.fileName}} {{image.resolution}}, assets/images/bg/{{image.fileNameHi}} {{image.resolutionHi}}"
+      media="{{ image.media }}"
       type="image/webp"
     />
 
@@ -32,7 +23,7 @@
         assets/images/bg/bg-2760.jpg 2760w,
         assets/images/bg/bg-3840.jpg 3840w
       "
-      src="assets/images/bg/bg--large-hi-dpi_bdjqao_c_scale,w_3840.jpg"
+      src="assets/images/bg/bg-3840.jpg"
       alt="Image Background"
     />
   </picture>
