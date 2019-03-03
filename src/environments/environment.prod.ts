@@ -1,4 +1,4 @@
-import fireKey from './firebase.key';
+import { fireKey } from './firebase.key';
 
 export const environment = {
   firebase: fireKey,
