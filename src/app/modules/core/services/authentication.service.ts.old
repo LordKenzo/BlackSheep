@@ -10,6 +10,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class AuthenticationService {
   constructor(public angularFireAuth: AngularFireAuth, public router: Router) {
     this.angularFireAuth.authState.subscribe(userResponse => {
+      console.log('userResponse', userResponse);
       if (userResponse) {
         localStorage.setItem('user', JSON.stringify(userResponse));
       } else {
