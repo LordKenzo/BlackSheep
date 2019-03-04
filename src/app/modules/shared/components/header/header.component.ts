@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+
 import { EasingLogic } from 'ngx-page-scroll-core';
+import { AuthenticationService } from 'src/app/modules/core/services/authentication.service';
 
 @Component({
   selector: 'bs-header',
   templateUrl: 'header.component.html',
 })
 export class HeaderComponent {
+
+  constructor(public authenticationService: AuthenticationService) {}
+
   public myEasing: EasingLogic = (t: number, b: number, c: number, d: number): number => {
     // easeInOutExpo easing
     if (t === 0) {

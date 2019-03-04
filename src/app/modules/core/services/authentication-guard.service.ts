@@ -17,7 +17,7 @@ export class AuthenticationGuardService {
     console.log('Guardia is checking...');
     return this.afAuth.authState.pipe(
       take(1),
-      map(user => !!user),
+      map(user => !!user), // faccio un controllo "strict" booleano a true :)
       tap(loggedIn => {
         console.log('loggedIn', loggedIn);
         if (!loggedIn) {

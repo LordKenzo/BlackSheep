@@ -76,9 +76,18 @@
           >Promozioni</a
         >
       </li>
-      <li><a [routerLink]="['/admin']">Admin</a></li>
-      <li><a [routerLink]="['/auth']">Login</a></li>
-      <li><a [routerLink]="['/auth/logout']">Logout</a></li>
+
+      <li *isLogged="true"><a [routerLink]="['/admin']">Admin</a></li>
+
+
+      <li *isLogged="true"><a [routerLink]="['/auth/logout']">Logout</a></li>
+
+
+      <li *isLogged="false"><a [routerLink]="['/auth']">Login</a></li>
+      <h1 *isLogged="true">Welcome {{ (authenticationService.user)?.email }}!</h1>
+      <img style="width:64px" *isLogged="true" [src]="authenticationService.user?.photoURL">
     </ul>
+
   </nav>
 </header>
+<bs-banner></bs-banner>
