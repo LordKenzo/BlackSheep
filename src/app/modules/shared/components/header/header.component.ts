@@ -6,6 +6,7 @@ import { AuthenticationService } from 'src/app/modules/core/services/authenticat
 @Component({
   selector: 'bs-header',
   templateUrl: 'header.component.html',
+  styleUrls: ['header.component.scss']
 })
 export class HeaderComponent {
 

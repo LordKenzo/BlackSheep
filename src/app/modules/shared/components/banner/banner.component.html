@@ -1,36 +1,7 @@
-<div class="large-banner">
-  <!-- Uso una immagine e non una background image in SASS per gestire le immagini in maniera responsive -->
+<div class="landing">
+    <div class="home-wrap">
+      <div class="home-inner">
 
-  <picture *ngIf="images">
-    <source
-      *ngFor="let image of images"
-      srcset="assets/images/bg/{{image.fileName}} {{image.resolution}}, assets/images/bg/{{image.fileNameHi}} {{image.resolutionHi}}"
-      media="{{ image.media }}"
-      type="image/webp"
-    />
-
-    <img
-      type="image/jpeg"
-      sizes="(max-width: 3840px) 100vw, 3840px"
-      srcset="
-        assets/images/bg/bg-640.jpg   640w,
-        assets/images/bg/bg-990.jpg   990w,
-        assets/images/bg/bg-1280.jpg 1280w,
-        assets/images/bg/bg-1380.jpg 1380w,
-        assets/images/bg/bg-1920.jpg 1920w,
-        assets/images/bg/bg-1980.jpg 1980w,
-        assets/images/bg/bg-2760.jpg 2760w,
-        assets/images/bg/bg-3840.jpg 3840w
-      "
-      src="assets/images/bg/bg-3840.jpg"
-      alt="Image Background"
-    />
-  </picture>
-
-  <div class="large-banner__text-content">
-    <h1 class="large-banner__title">{{ title }}</h1>
-    <h2 class="large-banner__subtitle">{{ subtitle }}</h2>
-    <p class="large-banner__description">We create soul and body that inspire you to be you.</p>
-    <a class="btn btn--large" href="#">Join Us Today!</a>
+      </div>
+    </div>
   </div>
-</div>

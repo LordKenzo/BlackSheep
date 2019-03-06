@@ -1,4 +1,33 @@
 <header>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a [routerLink]="['/home']" class="navbar-brand">
+        <img src="assets/images/icons/logo.jpg" alt="Logo BlackSheep Gym">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span><i class="fas fa-bars fas--white fas--big"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a [routerLink]="['/home']" [routerLinkActive]="['active']" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/staff']" [routerLinkActive]="['active']"  class="nav-link">Staff</a>
+          </li>
+          <li class="nav-item" *isLogged="true"><a class="nav-link" [routerLink]="['/admin']">Admin</a></li>
+          <li class="nav-item" *isLogged="true"><a class="nav-link" [routerLink]="['/auth/logout']">Logout</a></li>
+          <li class="nav-item" *isLogged="false"><a class="nav-link" [routerLink]="['/auth']">Login</a></li>
+          <li class="nav-item" *isLogged="true">
+              <a class="nav-link" [routerLink]="['']">{{ (authenticationService.user)?.email }}!</a></li>
+          <li class="nav-item" *isLogged="true">
+              <img style="width:48px; display:inline-block;" *isLogged="true" [src]="authenticationService.user?.photoURL"></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--
   <img src="assets/images/icons/sheep.svg" />
   <a href="#">Contattaci</a>
   <nav>
@@ -89,5 +118,9 @@
     </ul>
 
   </nav>
+  -->
 </header>
+
+
+
 <bs-banner></bs-banner>

@@ -36,7 +36,7 @@ export class AuthenticationService {
           this.user = {
             uid: profile.uid,
             email: profile.email,
-            photoURL: profile.photoURL || 'https://goo.gl/Fz9nrQ',
+            photoURL: profile.photoURL || 'https://goo.gl/YajTkH',
             displayName: profile.displayName,
           };
           const docRef = this.db.collection('UserProfile').doc(profile.uid).get();

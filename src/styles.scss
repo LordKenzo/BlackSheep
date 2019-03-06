@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,400i,700,800');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import 'assets/sass/abstract/index';
 @import 'assets/sass/base/index';
+@import 'assets/sass/layout/index';
 @import 'assets/sass/components/index';
-
-@font-face {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-display: auto;
-}
+@import 'assets/sass/vendors/index';
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
+  overflow-x: hidden;
+  font-family: 'Lato', 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  color: #505962;
 }
 
 img {

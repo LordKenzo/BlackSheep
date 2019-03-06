@@ -32,9 +32,9 @@
 -->
 
 
-<div >
-  <input type="text" [(ngModel)]="email" placeholder="email">
-  <input type="password" [(ngModel)]="password" placeholder="password">
+<form class="authBlock" >
+  <input type="text" name="email" [(ngModel)]="email" placeholder="email">
+  <input type="password" name="password" [(ngModel)]="password" placeholder="password">
 
   <button (click)="signup()" [disabled]="!email || !password">
     Signup
@@ -43,7 +43,7 @@
   <button (click)="login()" [disabled]="!email || !password">
     Login
   </button>
-</div>
+</form>
 <!--
 <button (click)="logout()" *ngIf="authenticationService.user | async">
   Logout
